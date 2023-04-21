@@ -67,9 +67,9 @@ Your react app should be made up of a minimum of 3 components:
 ### Cart
 
 - The cart has a class name of `Cart`
-- When I click on a bird card's adopt button, its name appears in the cart as an `<ol>` list item.
+- When I click on a bird card's adopt button, its name, amount and a delete button appears in the cart as an `<ol>` list item.
 - The total shows up as an `<h4>` element inside the cart
-- When I click on an additional item, the total cost is updated and additional bird name(s) is added as a list item to the unordered list
+- When I click on an additional item, the total cost is updated and additional bird name(s) is added as a list item to the ordered list
 - When there are less than 3 birds in the cart there is a 0% discount
 - When there are 3 or more birds in the cart there is a 10% discount
 
