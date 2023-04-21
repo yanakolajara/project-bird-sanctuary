@@ -30,7 +30,7 @@ You may receive partial credit (0.5 points) for code that is close to passing th
 
 Create a bird sanctuary donation app that meets the user stories below.
 
-**The birds are in the array in `src/data/birds.js` and the bonus itesms are in `src/data/bonusItems.js`. Import these and pass them to your components. Use these items and do not change any information in the array, or else the tests will fail.**
+**The birds are in the array in `src/data/birds.js` and the bonus items are in `src/data/bonusItems.js`. Import these and pass them to your components. Use these items and do not change any information in the array, or else the tests will fail.**
 
 The following demo has been styled for clarity. You do not need to style this app.
 
