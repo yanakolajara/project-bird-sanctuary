@@ -106,7 +106,7 @@ The bonuses come from `src/data/bonusItems.js`
 This project is to help you assess your progress in learning React.
 
 - Do this project **on your own**.
-  - Do not pair programwith other fellows or submit one project for more than one person .
+  - Do not pair program with other fellows or submit one project for more than one person .
   - Do not refer to work from other (current or former) fellows.
   - Do not ask individuals outside the program for help.
 - You can refer to any notes that you have.
