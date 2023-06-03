@@ -1,8 +1,8 @@
 #mainDiv{
     display: flex;
-    border: 2px solid green; /* Remove */
     padding: 20px;
     padding:10px 20px 10px 20px;
+    background-color:rgb(243, 255, 242);
 }
 aside {
     display:inline-block;
@@ -35,24 +35,42 @@ input {
 
 main {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     padding: 20px;
     width: 80%;
-    border: 2px solid blue; /* Remove */
 }
 
 .birdBox{
     display: block;
     width: 240px;
-    height: 300px;
-    border: 2px solid green;
+    height: 350px;
+    border: 2px solid rgb(44, 144, 44);
+    background-color: rgb(226, 255, 225);
+    border-radius: 25px;
     margin: 5px;
 }
 
 .birdName,
 .birdImage,
-.birdPrice {
+.birdPrice,
+.birdAdopt {
     display: flex;
     justify-content: center;
     /* Add width and height for image, as well as round corners*/
+}
+.birdName{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.birdImage {
+    display: flex;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+}
+.birdAdopt {
+    border-radius: 25px;
+    margin-left: 30%;
 }

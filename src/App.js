@@ -1,4 +1,5 @@
 import './App.css'
+import birdData from './data/birds.js';
 
 function App () {
   // TODO: Import birdData from data/birds.js
@@ -49,8 +50,9 @@ function App () {
       <main class="birds">
         <div class="birdBox">
           <p class="birdName">Bird name</p>
-          <img class="birdImage" alt="bird image"/>
+          <img class="birdImage" alt="bird image" src={birdData[6].img}/>
           <p class="birdPrice">$Bird Price</p>
+          <button class="birdAdopt" onClick=''>Adopt</button>
         </div>
         <div class="birdBox"></div>
         <div class="birdBox"></div>
