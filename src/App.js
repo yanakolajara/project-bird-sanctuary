@@ -1,7 +1,8 @@
 import './App.css'
 
 function App () {
-  const data = require('./data/birds.js')
+  // TODO: Import birdData from data/birds.js
+  // TODO: Get img from birdData array
   return (
     <div id="mainDiv">
       <aside>
