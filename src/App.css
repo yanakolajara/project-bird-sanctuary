@@ -1,0 +1,18 @@
+#mainDiv{
+    display: flex;
+    border: 2px solid green; /* Remove */
+    padding: 20px;
+    padding:10px 20px 10px 20px;
+}
+aside {
+    display:inline-block;
+    border: 2px solid red; /* Remove */
+    width: 20%;
+    height: 600px;
+    margin-right: 20px;
+}
+main {
+    display: block;
+    width: 80%;
+    border: 2px solid blue; /* Remove */
+}
