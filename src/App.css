@@ -6,9 +6,7 @@
 }
 aside {
     display:inline-block;
-    border: 2px solid red; /* Remove */
     width: 20%;
-    height: 700px;
     margin-right: 20px;
 }
 .title{
@@ -18,31 +16,20 @@ aside {
     margin-bottom: 10px;
     font-weight: bolder;
 }
+.checkOut,
 .cart {
     display: block;
-    border: 2px dotted purple;
+    border: 2px solid rgb(159, 159, 159);
+    border-radius: 20px;
     height: auto;
     margin: 10px 0px 10px 0px;
+    padding: 5px 20px 5px 20px;
 }
-.checkOut {
-    display: block;
-    justify-content: center;
-    border: 2px dotted purple;
-    width: auto;
-    height: 400px;
-    margin: 10px 0px 10px 0px;
+label,
+input {
+    width: 100%;
 }
 
-label {
-    margin: 0px;
-}
-form {
-    display: inline;
-    justify-content: center;
-}
-input {
-    width: 90%;
-}
 main {
     display: block;
     width: 80%;
