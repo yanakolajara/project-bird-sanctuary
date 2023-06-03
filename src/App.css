@@ -30,8 +30,29 @@ input {
     width: 100%;
 }
 
+
+
+
 main {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 20px;
     width: 80%;
     border: 2px solid blue; /* Remove */
+}
+
+.birdBox{
+    display: block;
+    width: 240px;
+    height: 300px;
+    border: 2px solid green;
+    margin: 5px;
+}
+
+.birdName,
+.birdImage,
+.birdPrice {
+    display: flex;
+    justify-content: center;
+    /* Add width and height for image, as well as round corners*/
 }

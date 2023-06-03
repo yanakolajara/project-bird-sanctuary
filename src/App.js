@@ -1,6 +1,7 @@
 import './App.css'
 
 function App () {
+  const data = require('./data/birds.js')
   return (
     <div id="mainDiv">
       <aside>
@@ -44,7 +45,17 @@ function App () {
           </form>
         </div>
       </aside>
-      <main class="birds">birds</main>
+      <main class="birds">
+        <div class="birdBox">
+          <p class="birdName">Bird name</p>
+          <img class="birdImage" alt="bird image"/>
+          <p class="birdPrice">$Bird Price</p>
+        </div>
+        <div class="birdBox"></div>
+        <div class="birdBox"></div>
+        <div class="birdBox"></div>
+        <div class="birdBox"></div>        
+      </main>
     </div>
   );
 };
