@@ -1,16 +1,26 @@
 import './App.css'
 import birdData from './data/birds.js';
 import {birdList} from './BirdArr.js'
+import { useState } from 'react';
 
 function App () {
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [zipcode, setZipcode] = useState('');
+
   return (
     <div id="mainDiv">
       <aside>
         <div class="cart">
           <p class="title">Cart</p>
-          <div>Test1</div>
-          <div>Test2</div>
-          <div>Test3</div>
+          <div class="cartBirds">
+            
+          </div>
+          <div class="cartSummary">
+            <div class="discount">Discount: </div>
+            <div class="totalCost">Total: </div>
+          </div>
         </div>
         <div class="checkOut">
           <p class="title">Checkout</p>
@@ -19,25 +29,29 @@ function App () {
             <input
             type="text"
             id="firstName"
-            value=""
+            value={firstName}
+            onChange={(x) => setFirstName(x.target.value)}
             />
             <label htmlFor="lastName">Last Name</label>
             <input
             type="text"
             id="lastName"
-            value=""
+            value={lastName}
+            onChange={(x) => setLastName(x.target.value)}
             />
             <label htmlFor="email">Email</label>
             <input
             type="email"
             id="email"
-            value=""
+            value={email}
+            onChange={(x) => setEmail(x.target.value)}
             />
             <label htmlFor="zipCode">Zip code</label>
             <input
             type="number"
             id="zipCode"
-            value=""
+            value={zipcode}
+            onChange={(x) => setZipcode(x.target.value)}
             />
             <input
             type="submit"
