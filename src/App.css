@@ -48,6 +48,7 @@ main {
     background-color: rgb(226, 255, 225);
     border-radius: 25px;
     margin: 5px;
+    position: relative;
 }
 
 .birdName,
@@ -64,8 +65,10 @@ main {
 }
 .birdImage {
     display: flex;
-    width: 90%;
-    border-radius: 10px;
+    width: 216px;
+    height: 216px;
+    border-radius: 20px;
+    border: 2px solid rgb(96, 147, 97);
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 10px;
@@ -73,4 +76,6 @@ main {
 .birdAdopt {
     border-radius: 25px;
     margin-left: 30%;
+    position: absolute;
+    bottom: 0;
 }

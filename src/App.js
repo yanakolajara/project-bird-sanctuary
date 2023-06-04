@@ -1,9 +1,8 @@
 import './App.css'
 import birdData from './data/birds.js';
+import {birdList} from './BirdArr.js'
 
 function App () {
-  // TODO: Import birdData from data/birds.js
-  // TODO: Get img from birdData array
   return (
     <div id="mainDiv">
       <aside>
@@ -48,16 +47,7 @@ function App () {
         </div>
       </aside>
       <main class="birds">
-        <div class="birdBox">
-          <p class="birdName">Bird name</p>
-          <img class="birdImage" alt="bird image" src={birdData[6].img}/>
-          <p class="birdPrice">$Bird Price</p>
-          <button class="birdAdopt" onClick=''>Adopt</button>
-        </div>
-        <div class="birdBox"></div>
-        <div class="birdBox"></div>
-        <div class="birdBox"></div>
-        <div class="birdBox"></div>        
+        {birdList()}  
       </main>
     </div>
   );
