@@ -21,8 +21,9 @@ export const birdList = () => {
 export const addElement = (bird) => {
     const birdElement = document.createElement('li');
     const newTotal = document.querySelector('.totalCost')
-    birdElement.appendChild(document.createTextNode(`${bird.name}: $${bird.amount} (id: ${bird.id})`))
-    birdElement.setAttribute('attribute', bird.amount)
+    birdElement.appendChild(document.createTextNode(`${bird.name}: $${bird.amount}`))
+    birdElement.setAttribute('amount', bird.amount)
+    birdElement.setAttribute('id', bird.id)
     document.querySelector('#cartList').appendChild(birdElement)
     newTotal.removeChild(newTotal.firstChild)
     newTotal.appendChild(document.createTextNode(`Total: $${(total += bird.amount).toFixed(2)}`))
