@@ -25,7 +25,8 @@ function App () {
           </div>
           <hr/>
           <div class="cartSummary">
-            <div class="discount">Discount: </div>
+            <p class="discount">Discount: 0%</p>
+            <p class="subtotal">Subtotal: $0.00</p>
             <p class="totalCost">Total: $0.00</p>
           </div>
         </div>

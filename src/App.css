@@ -27,6 +27,11 @@ aside {
     margin: 10px 0px 10px 0px;
     padding: 5px 20px 5px 20px;
 }
+.totalCost,
+.subtotal,
+.discount{
+    margin: 0px;
+}
 .totalCost {
     font-weight: bold;
 }
