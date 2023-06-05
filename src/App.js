@@ -2,7 +2,6 @@ import './App.css'
 import birdData from './data/birds.js';
 import {birdList} from './Info.js'
 import { useState } from 'react';
-import {total} from './Info.js'
 
 function App () {
   const [firstName, setFirstName] = useState('')

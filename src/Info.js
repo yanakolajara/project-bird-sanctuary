@@ -18,6 +18,7 @@ export const birdList = () => {
     )
 }
 
+export let total = 0;
 export const addElement = (bird) => {
     const birdElement = document.createElement('li');
     const newSubtotal = document.querySelector('.subtotal')
@@ -40,5 +41,3 @@ export const addElement = (bird) => {
     }
     return;
 }
-
-export let total = 0;
