@@ -4,6 +4,9 @@
     padding:10px 20px 10px 20px;
     background-color:rgb(243, 255, 242);
 }
+hr {
+    margin: 0px;
+}
 aside {
     display:inline-block;
     width: 20%;
@@ -25,6 +28,9 @@ aside {
     height: auto;
     margin: 10px 0px 10px 0px;
     padding: 5px 20px 5px 20px;
+}
+.totalCost {
+    font-weight: bold;
 }
 label,
 input {

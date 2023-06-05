@@ -23,6 +23,7 @@ function App () {
             <ol id="cartList">
             </ol>
           </div>
+          <hr/>
           <div class="cartSummary">
             <div class="discount">Discount: </div>
             <p class="totalCost">Total: $0.00</p>
