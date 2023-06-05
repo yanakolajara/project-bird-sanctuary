@@ -9,10 +9,6 @@ function App () {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [zipcode, setZipcode] = useState('');
-  const totalCost = () => {
-    console.log('DONE!')
-    return
-  }
 
   return (
     <div id="mainDiv">
