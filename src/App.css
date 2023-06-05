@@ -9,10 +9,8 @@ hr {
 }
 aside {
     display:inline-block;
-    width: 20%;
     margin-right: 20px;
 }
-/* TODO: Add hover/active effects to submit and button*/
 .title{
     display: flex;
     justify-content: center;
