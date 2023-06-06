@@ -1,5 +1,4 @@
 import './App.css'
-import birdData from './data/birds.js';
 import {birdList} from './Info.js'
 import { useState } from 'react';
 
@@ -8,6 +7,7 @@ function App () {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [zipcode, setZipcode] = useState('');
+  const test = () => {console.log("TEST123")}
 
   return (
     <div id="mainDiv">
@@ -15,14 +15,14 @@ function App () {
         <div class="cart">
           <p class="title">Cart</p>
           <div class="cartBirds">
-            <ol id="cartList">
+            <ol id="cartList" value="0">
             </ol>
           </div>
           <hr/>
           <div class="cartSummary">
-            <p class="subtotal">Subtotal: $0.00</p>
+            <p class="subtotal" value="0">Subtotal: $0.00</p>
             <p class="discount">Discount: 0%</p>
-            <h4 class="totalCost">Total: $0.00</h4>
+            <h4 class="totalCost" value="0">Total: $0.00</h4>
           </div>
           <hr/>
           <div class="bonusItems">
