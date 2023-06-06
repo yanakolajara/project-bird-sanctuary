@@ -20,9 +20,18 @@ function App () {
           </div>
           <hr/>
           <div class="cartSummary">
-            <p class="discount">Discount: 0%</p>
             <p class="subtotal">Subtotal: $0.00</p>
-            <p class="totalCost">Total: $0.00</p>
+            <p class="discount">Discount: 0%</p>
+            <h4 class="totalCost">Total: $0.00</h4>
+          </div>
+          <hr/>
+          <div class="bonusItems">
+            <ul class="bonusList">
+              <li>a</li>
+              <li>a</li>
+              <li>a</li>
+              <li>a</li>
+            </ul>
           </div>
         </div>
         <div class="checkOut">

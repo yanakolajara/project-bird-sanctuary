@@ -17,16 +17,20 @@ export const birdList = () => {
         </>
     )
 }
-
 export let total = 0;
+
 export const addElement = (bird) => {
     const birdElement = document.createElement('li');
     const newSubtotal = document.querySelector('.subtotal')
     const newTotal = document.querySelector('.totalCost')
     const newDiscount = document.querySelector('.discount')
+    //const removeButton = document.createElement('button')
     birdElement.appendChild(document.createTextNode(`${bird.name}: $${bird.amount}`))
     birdElement.setAttribute('amount', bird.amount)
     birdElement.setAttribute('id', bird.id)
+    //removeButton.setAttribute('class', 'removeButton')
+    //removeButton.setAttribute('onClick', () => removeElement())
+    //birdElement.appendChild(removeButton)
     document.querySelector('#cartList').appendChild(birdElement)
     newSubtotal.removeChild(newSubtotal.firstChild)
     newSubtotal.appendChild(document.createTextNode(`Subtotal: $${(total += bird.amount).toFixed(2)}`))
@@ -39,5 +43,12 @@ export const addElement = (bird) => {
         newTotal.removeChild(newTotal.firstChild)
         newTotal.appendChild(document.createTextNode(`Total: $${(total).toFixed(2)}`))
     }
+    return;
+}
+
+
+// TODO: Create function that deletes item from list and updates price, as well as bonus
+export const removeElement = () => {
+    console.log('DONE')
     return;
 }

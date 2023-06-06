@@ -7,6 +7,9 @@
 hr {
     margin: 0px;
 }
+h4 {
+    font-size: 1.5em;
+}
 aside {
     display:inline-block;
     margin-right: 20px;
@@ -31,10 +34,9 @@ aside {
 .subtotal,
 .discount{
     margin: 0px;
-}
-.totalCost {
     font-weight: bold;
 }
+
 label,
 input {
     width: 100%;
