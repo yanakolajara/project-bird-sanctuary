@@ -1,5 +1,6 @@
 import birdData from './data/birds.js';
 
+export let total = 0;
 export const birdList = () => {
     const list = birdData.map(bird => {
         return(
@@ -9,28 +10,25 @@ export const birdList = () => {
             <p class="birdPrice">${bird.amount.toFixed(2)}</p>
             <button class="birdAdopt" onClick={() => addElement(bird)}>Adopt</button>
         </div>
-        )
-    })
+        )})
     return(
-        <>
-            {list}
-        </>
+        <>{list}</>
     )
 }
-export let total = 0;
 
 export const addElement = (bird) => {
     const birdElement = document.createElement('li');
+    const removeButton = document.createElement('p')
     const newSubtotal = document.querySelector('.subtotal')
     const newTotal = document.querySelector('.totalCost')
     const newDiscount = document.querySelector('.discount')
-    //const removeButton = document.createElement('button')
+
     birdElement.appendChild(document.createTextNode(`${bird.name}: $${bird.amount}`))
     birdElement.setAttribute('amount', bird.amount)
     birdElement.setAttribute('id', bird.id)
-    //removeButton.setAttribute('class', 'removeButton')
-    //removeButton.setAttribute('onClick', () => removeElement())
-    //birdElement.appendChild(removeButton)
+    removeButton.setAttribute('class', 'removeElement')
+    removeButton.appendChild(document.createTextNode('Remove'))
+    birdElement.appendChild(removeButton)
     document.querySelector('#cartList').appendChild(birdElement)
     newSubtotal.removeChild(newSubtotal.firstChild)
     newSubtotal.appendChild(document.createTextNode(`Subtotal: $${(total += bird.amount).toFixed(2)}`))
@@ -48,7 +46,3 @@ export const addElement = (bird) => {
 
 
 // TODO: Create function that deletes item from list and updates price, as well as bonus
-export const removeElement = () => {
-    console.log('DONE')
-    return;
-}
