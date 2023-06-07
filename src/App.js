@@ -1,12 +1,14 @@
 import './App.css'
 import {birdList} from './Info.js'
 import { useState } from 'react';
+import bonusItems from './data/bonusItems.js'
 
 function App () {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [zipcode, setZipcode] = useState('');
+  
 
   return (
     <div id="mainDiv">
@@ -25,7 +27,7 @@ function App () {
           </div>
           <hr/>
           <div class="bonusItems">
-            <ul class="bonusList">
+            <ul id="bonusList">
             </ul>
           </div>
         </div>

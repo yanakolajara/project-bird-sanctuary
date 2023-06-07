@@ -23,6 +23,7 @@ export const addElement = (bird) => {
     const cartValue = Number(document.getElementById('cartBirds').getAttribute('value'))
     const newSubtotal = document.querySelector('.subtotal')
     const cartList = document.querySelector('#cartBirds')
+    const bonus = document.querySelector('#bonusList')
 
     birdElement.appendChild(document.createTextNode(`${bird.name}: $${bird.amount}`))
     birdElement.setAttribute('amount', bird.amount)
@@ -37,22 +38,34 @@ export const addElement = (bird) => {
     const newTotal = document.querySelector('.totalCost');\
     const newDiscount = document.querySelector('.discount');\
     const listLength = document.getElementById('cartList').children.length;\
+    const bonus = document.querySelector('#bonusList');\
     cartList.setAttribute('value', cartValue - parentNode.getAttribute('amount'));\
     const newCartValue = Number(document.getElementById('cartBirds').getAttribute('value'));\
     newSubtotal.removeChild(newSubtotal.firstChild);\
     newSubtotal.appendChild(document.createTextNode(`Subtotal: $${newCartValue}`));\
     const discount = listLength >= 3;\
+    const newCartLength = document.querySelector('#cartList').children.length;\
     discount ? (newDiscount.removeChild(newDiscount.firstChild),newDiscount.appendChild(document.createTextNode(`Discount: 10%`))) : (newTotal.removeChild(newTotal.firstChild), newTotal.appendChild(document.createTextNode(`Total: $${(newCartValue).toFixed(2)}`))) ;\
     discount ? (newTotal.removeChild(newTotal.firstChild) , newTotal.appendChild(document.createTextNode(`Total: $${(newCartValue * .9).toFixed(2)}`))) : (newDiscount.removeChild(newDiscount.firstChild),newDiscount.appendChild(document.createTextNode(`Discount: 0%`)));\
-    ")
+    if(newCartLength < 4){\
+        bonus.children[newCartLength].remove();\
+    }")
     
     birdElement.appendChild(removeButton)
     document.querySelector('#cartList').appendChild(birdElement)
     newSubtotal.removeChild(newSubtotal.firstChild)
     cartList.setAttribute('value', cartValue + bird.amount)
     const newCartValue = Number(document.getElementById('cartBirds').getAttribute('value'))
+    const newCartLength = document.querySelector('#cartList').children.length
     newSubtotal.appendChild(document.createTextNode(`Subtotal: $${(newCartValue).toFixed(2)}`))
     verifyDiscount(newCartValue)
+    bonus.innerHTML = ''
+    for(let x = 0; x < newCartLength; x++){
+        if(x >= 4){break}
+        const bonusItem = document.createElement('li')
+        bonusItem.appendChild(document.createTextNode(bonusItems[x]))
+        bonus.append(bonusItem)
+    }
     // TODO: Add bonus list logic
 }
 
