@@ -14,8 +14,8 @@ function App () {
       <aside>
         <div class="cart">
           <p class="title">Cart</p>
-          <div class="cartBirds">
-            <ol id="cartList" value="0">
+          <div id="cartBirds" value="0">
+            <ol id="cartList">
             </ol>
           </div>
           <hr/>
