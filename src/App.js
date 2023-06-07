@@ -1,5 +1,5 @@
 import './App.css'
-import {birdList} from './Info.js'
+import {birdList,submitForm} from './Info.js'
 import { useState } from 'react';
 import bonusItems from './data/bonusItems.js'
 
@@ -33,13 +33,14 @@ function App () {
         </div>
         <div class="checkOut">
           <p class="title">Checkout</p>
-          <form onSubmit="">
+          <form onSubmit={() => submitForm()}>
             <label htmlFor="firstName">First Name</label>
             <input
             type="text"
             id="firstName"
             value={firstName}
             onChange={(x) => setFirstName(x.target.value)}
+            required
             />
             <label htmlFor="lastName">Last Name</label>
             <input
@@ -47,6 +48,7 @@ function App () {
             id="lastName"
             value={lastName}
             onChange={(x) => setLastName(x.target.value)}
+            required
             />
             <label htmlFor="email">Email</label>
             <input
@@ -54,6 +56,7 @@ function App () {
             id="email"
             value={email}
             onChange={(x) => setEmail(x.target.value)}
+            required
             />
             <label htmlFor="zipCode">Zip code</label>
             <input
@@ -61,6 +64,7 @@ function App () {
             id="zipCode"
             value={zipcode}
             onChange={(x) => setZipcode(x.target.value)}
+            required
             />
             <input
             type="submit"

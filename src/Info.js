@@ -47,9 +47,23 @@ export const addElement = (bird) => {
     const newCartLength = document.querySelector('#cartList').children.length;\
     discount ? (newDiscount.removeChild(newDiscount.firstChild),newDiscount.appendChild(document.createTextNode(`Discount: 10%`))) : (newTotal.removeChild(newTotal.firstChild), newTotal.appendChild(document.createTextNode(`Total: $${(newCartValue).toFixed(2)}`))) ;\
     discount ? (newTotal.removeChild(newTotal.firstChild) , newTotal.appendChild(document.createTextNode(`Total: $${(newCartValue * .9).toFixed(2)}`))) : (newDiscount.removeChild(newDiscount.firstChild),newDiscount.appendChild(document.createTextNode(`Discount: 0%`)));\
-    if(newCartLength < 4){\
-        bonus.children[newCartLength].remove();\
-    }")
+    const total = discount ? newCartValue * .9 : newCartValue;\
+    if(total < 1000 & total >= 500){\
+        !!bonus.children[3] ? bonus.children[3].remove() : NaN;\
+    } else if(total < 500 & total >= 300){\
+        !!bonus.children[3] ? bonus.children[3].remove() : NaN;\
+        !!bonus.children[2] ? bonus.children[2].remove() : NaN;\
+    } else if(total < 300 & total >= 100){\
+        !!bonus.children[3] ? bonus.children[3].remove() : NaN;\
+        !!bonus.children[2] ? bonus.children[2].remove() : NaN;\
+        !!bonus.children[1] ? bonus.children[1].remove() : NaN;\
+    } else if(total < 100){\
+        !!bonus.children[3] ? bonus.children[3].remove() : NaN;\
+        !!bonus.children[2] ? bonus.children[2].remove() : NaN;\
+        !!bonus.children[1] ? bonus.children[1].remove() : NaN;\
+        !!bonus.children[0] ? bonus.children[0].remove() : NaN;\
+    };\
+    ")
     
     birdElement.appendChild(removeButton)
     document.querySelector('#cartList').appendChild(birdElement)
@@ -60,11 +74,28 @@ export const addElement = (bird) => {
     newSubtotal.appendChild(document.createTextNode(`Subtotal: $${(newCartValue).toFixed(2)}`))
     verifyDiscount(newCartValue)
     bonus.innerHTML = ''
-    for(let x = 0; x < newCartLength; x++){
-        if(x >= 4){break}
+    if(verifyDiscount(newCartValue) >= 100 && verifyDiscount(newCartValue) < 300){
         const bonusItem = document.createElement('li')
-        bonusItem.appendChild(document.createTextNode(bonusItems[x]))
-        bonus.append(bonusItem)
+        bonusItem.appendChild(document.createTextNode(bonusItems[0]))
+        bonus.appendChild(bonusItem)
+    }else if(verifyDiscount(newCartValue) >= 300 && verifyDiscount(newCartValue) < 500){
+        for(let x = 0; x < 2; x++){
+            const bonusItem = document.createElement('li')
+            bonusItem.appendChild(document.createTextNode(bonusItems[x]))
+            bonus.appendChild(bonusItem)
+        }
+    }else if(verifyDiscount(newCartValue) >= 500 && verifyDiscount(newCartValue) < 1000){
+        for(let x = 0; x < 3; x++){
+            const bonusItem = document.createElement('li')
+            bonusItem.appendChild(document.createTextNode(bonusItems[x]))
+            bonus.appendChild(bonusItem)
+        }
+    }else{
+        for(let x = 0; x < 4; x++){
+            const bonusItem = document.createElement('li')
+            bonusItem.appendChild(document.createTextNode(bonusItems[x]))
+            bonus.appendChild(bonusItem)
+        }
     }
     // TODO: Add bonus list logic
 }
@@ -72,14 +103,21 @@ export const addElement = (bird) => {
 const verifyDiscount = (cartValue) => {
     const newTotal = document.querySelector('.totalCost')
     const newDiscount = document.querySelector('.discount')
+    let total = NaN
     if(document.querySelector('#cartList').children.length >= 3){
         newDiscount.removeChild(newDiscount.firstChild)
         newDiscount.appendChild(document.createTextNode(`Discount: 10%`))
         newTotal.removeChild(newTotal.firstChild)
         newTotal.appendChild(document.createTextNode(`Total: $${(cartValue * .9).toFixed(2)}`))
+        total = cartValue * .9;
     }else{
         newTotal.removeChild(newTotal.firstChild)
         newTotal.appendChild(document.createTextNode(`Total: $${(cartValue).toFixed(2)}`))
+        total = cartValue
     }
-    return;
+    return total;
+}
+
+export const submitForm = () => {
+    alert("You have adopted birds. Thank you!")
 }
