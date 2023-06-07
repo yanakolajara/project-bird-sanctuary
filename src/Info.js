@@ -1,4 +1,5 @@
 import birdData from './data/birds.js';
+import bonusItems from './data/bonusItems.js'
 
 export let total = 0;
 export const birdList = () => {
@@ -52,6 +53,7 @@ export const addElement = (bird) => {
     const newCartValue = Number(document.getElementById('cartBirds').getAttribute('value'))
     newSubtotal.appendChild(document.createTextNode(`Subtotal: $${(newCartValue).toFixed(2)}`))
     verifyDiscount(newCartValue)
+    // TODO: Add bonus list logic
 }
 
 const verifyDiscount = (cartValue) => {
@@ -68,6 +70,3 @@ const verifyDiscount = (cartValue) => {
     }
     return;
 }
-
-
-//TODO: Add bonus

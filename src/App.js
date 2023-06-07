@@ -7,7 +7,6 @@ function App () {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [zipcode, setZipcode] = useState('');
-  const test = () => {console.log("TEST123")}
 
   return (
     <div id="mainDiv">
@@ -27,10 +26,6 @@ function App () {
           <hr/>
           <div class="bonusItems">
             <ul class="bonusList">
-              <li>a</li>
-              <li>a</li>
-              <li>a</li>
-              <li>a</li>
             </ul>
           </div>
         </div>
